@@ -56,19 +56,19 @@ Step 3: Configure Database (MySQL)
   src/main/resources/application.properties:
   
   
-  spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
-  
-  spring.datasource.username=root
-  
-  spring.datasource.password=yourpassword
-  
-  spring.jpa.hibernate.ddl-auto=update
-  
-  spring.jpa.show-sql=true
-  
-  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-  
-  server.port=8080
+    spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
+    
+    spring.datasource.username=root
+    
+    spring.datasource.password=yourpassword
+    
+    spring.jpa.hibernate.ddl-auto=update
+    
+    spring.jpa.show-sql=true
+    
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+    
+    server.port=8080
 
 
 💡 If you don’t want to set up MySQL, uncomment the H2 configuration in application.properties to use the in-memory database.
