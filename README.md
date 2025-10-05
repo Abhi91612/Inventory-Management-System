@@ -56,7 +56,7 @@ Step 3: Configure Database (MySQL)
   src/main/resources/application.properties:
   
   
-    spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
+    spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db?createDatabaseIfNotExist=true
     
     spring.datasource.username=root
     
@@ -79,11 +79,11 @@ Step 4: Run the Application
   
   Method 1: From STS
  
-  Right-click on the project → Run As → Spring Boot App
+    Right-click on the project → Run As → Spring Boot App
   
   Method 2: From Command Line
   
-  mvn spring-boot:run
+    mvn spring-boot:run
 
 
 
@@ -92,7 +92,7 @@ Step 4: Run the Application
 
 After the project runs successfully, open your browser and go to:
 
-👉 http://localhost:8080/swagger-ui/index.html#/
+    👉 http://localhost:8080/swagger-ui/index.html#/
 
 This page provides an interactive Swagger interface where you can test all API endpoints — including adding, updating, deleting, 
 
@@ -104,3 +104,53 @@ and viewing products — directly from the browser.
   Layered Architecture: Divided into Controller, Service, and Repository layers for maintainability and testing.
   
   Exception Handling: Centralized error handling via @ControllerAdvice.
+
+5. All End Points
+     product-controller
+
+          
+          PUT
+          /product/{id}/increase/{qty}
+          
+          
+          PUT
+          /product/{id}/decrease/{qty}
+          
+          
+          PUT
+          /product/updateByid/{id}
+          
+          
+          PUT
+          /product/increase/quantity/byOne/{id}
+          
+          
+          PUT
+          /product/decrease/quantity/byOne/{id}
+          
+          
+          POST
+          /product/add
+          
+          
+          GET
+          /product
+          
+          
+          GET
+          /product/list/low-stock
+          
+          
+          GET
+          /product/list/byname
+          
+          
+          GET
+          /product/getbyid/{id}
+          
+          
+          DELETE
+          /product/deletebyid/{id}
+
+
+
